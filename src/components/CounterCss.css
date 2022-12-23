@@ -1,0 +1,165 @@
+.mainDiv {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9ee367;
+    text-align: center;
+
+}
+
+.card {
+    width: 25%;
+    height: 60vh;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1Css {
+    color: #fff;
+    background: transparent;
+    font-size: 50px;
+    background-color: #30336b;
+    padding: 6px 0px 2px 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.linkcss {
+    color: white;
+    text-decoration: none;
+}
+
+.btnDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.btnCss {
+    min-height: 40px;
+    border-radius: 5%;
+    border-color: transparent;
+    background-color: #30336b;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 0px 15px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.btnCss:hover {
+    background-color: #79e521;
+}
+
+/* Form css */
+
+.formCard {
+    width: 55%;
+    height: 95vh;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.formInput {
+
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+
+}
+
+.formInput:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* user details css */
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    margin: 10px 15px;
+    min-width: 400px;
+}
+
+.zui-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.title {
+    color: #30336b;
+    font-size: 20px;
+}
+
+.backBtn {
+    margin-left: 1rem;
+}
+
+.f1 {
+    height: 30px !important;
+    margin: 10px 15px;
+    font-size: 15px !important;
+}
+
+button:disabled {
+    cursor: not-allowed;
+
+}
