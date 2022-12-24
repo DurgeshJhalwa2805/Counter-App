@@ -12,19 +12,7 @@ export default class UserForm extends Component {
             email: "",
             number: "",
             city: "",
-            lists: [
-                {
-                    name: "fsc",
-                    email: "asdas",
-                    number: "23232",
-                    city: "asdasd"
-                }, {
-                    name: "dsc",
-                    email: "asdas",
-                    number: "23232",
-                    city: "asdasd"
-                },
-            ],
+            lists: [],
         };
     }
 
