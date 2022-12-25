@@ -3,39 +3,6 @@ import "./CounterCss.css"
 
 export default class UserDetails extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         userData: this.props.userdata
-    //     }
-    // }
-    // componentDidMount() {
-    //     this.sortUserData()
-    // }
-
-
-    // sortUserData = () => {
-    //     if (this.state.userData.length > 1) {
-    //         let temp = this.state.userData
-    //         temp.sort((a, b) => {
-    //             let na = a.name.toLowerCase(),
-    //                 nb = b.name.toLowerCase();
-
-    //             if (na < nb) {
-    //                 return -1;
-    //             }
-    //             if (na > nb) {
-    //                 return 1;
-    //             }
-    //             return 0;
-    //         });
-    //         this.setState({ userData: temp })
-    //     }
-    // }
-
-
-
-
     render() {
 
         return (
@@ -75,3 +42,4 @@ export default class UserDetails extends Component {
         )
     }
 }
+

@@ -13,6 +13,7 @@ export default class UserForm extends Component {
             number: "",
             city: "",
             lists: [],
+            copyState: [],
         };
     }
 
@@ -52,9 +53,31 @@ export default class UserForm extends Component {
             this.setState({ lists: temp })
         }
     }
+
     handleSearch = e => {
-        console.log(e.target.value)
+        let search = e.target?.value?.toLowerCase()
+
+        let items = []
+        if (search.length >= 2) {
+            this.state.lists.filter((el) => {
+                if (el.name.toLowerCase().includes(search) || el.email.toLowerCase().includes(search) || el.number.toLowerCase().includes(search) || el.city.toLowerCase().includes(search)) {
+                    items.push(el)
+                }
+            })
+
+            this.setState({ lists: items })
+
+
+        }
+
+        if (search.length == 0) {
+            this.setState({ lists: this.state.copyState })
+        }
+
+
     }
+
+
 
 
     handleSubmit = e => {
@@ -62,6 +85,12 @@ export default class UserForm extends Component {
 
         this.setState({
             lists: [...this.state.lists, {
+                name: this.state.name,
+                email: this.state.email,
+                number: this.state.number,
+                city: this.state.city,
+            }],
+            copyState: [...this.state.copyState, {
                 name: this.state.name,
                 email: this.state.email,
                 number: this.state.number,
@@ -121,6 +150,15 @@ export default class UserForm extends Component {
                                 </button>
                             </div>
                         </form>
+                        {this.state.copyState.length > 1 && <div className='searchBox'>
+                            <input class="input-elevated" type="text" placeholder="Search..." onChange={this.handleSearch} onBlur={(e) => {
+                                if (e.target.value.length == 0) {
+
+                                    this.setState({ lists: this.state.copyState })
+                                }
+
+                            }} />
+                        </div>}
                     </div>
 
                     <UserDetails userdata={this.state.lists} />
@@ -131,3 +169,4 @@ export default class UserForm extends Component {
         )
     }
 }
+
